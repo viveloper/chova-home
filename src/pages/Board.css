@@ -1,0 +1,16 @@
+a{
+  text-decoration: none;
+}
+
+.table-board {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.table-board tbody td {
+  text-align: center;
+}
+
+.table-board tbody td.board-title {
+  text-align: left;
+}
