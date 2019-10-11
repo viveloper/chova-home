@@ -1,0 +1,12 @@
+.write-table{
+  width: 95%;
+  margin: 0 auto;
+}
+
+.write-table .write-table-row .desc {
+  width: 4rem;
+}
+
+.write-table .write-table-row input,textarea {
+  width: 100%;
+}

@@ -13,10 +13,12 @@ const indexRouter = require('./routes/index')
 const authRouter = require('./routes/auth')
 const usersRouter = require('./routes/users')
 const boardRouter = require('./routes/board')
+const postsRouter = require('./routes/posts')
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/users', usersRouter)
 app.use('/board', boardRouter)
+app.use('/posts', postsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

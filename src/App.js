@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Board from './pages/Board';
+import Write from './pages/Write';
+import Modify from './pages/Modify';
+import Post from './pages/Post';
 import Albums from './pages/Albums';
 import Calendar from './pages/Calendar';
 import Login from './pages/Login';
@@ -16,7 +19,10 @@ export default function App() {
       <Navbar component={Navbar} />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/board/:category" render={(props)=><Board {...props} />} />
+        <Route path="/board/:category" exact render={(props)=><Board {...props} />} />
+        <Route path="/board/:category/write" render={(props)=><Write {...props} />} />
+        <Route path="/board/:category/modify/:id" render={(props)=><Modify {...props} />} />
+        <Route path="/board/:category/:id" render={(props)=><Post {...props} />} />
         <Route path="/albums" exact render={(props)=><Albums {...props} />} />
         <Route path="/albums/:category" render={(props)=><Albums {...props} />} />
         <Route path="/calendar" component={Calendar} />
