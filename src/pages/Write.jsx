@@ -49,14 +49,12 @@ export default function Write(props) {
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       };
       const response = await fetch(url, reqOpt);
-      const result = await response.json();
-      console.log(result.success);
-      if (result.success) {
-        console.log('write success.');
+      const result = await response.json();      
+      if (result.success) {        
         props.history.push(`/board/${category}/${result.id}`);
       }
       else{
-        console.log('write fail.');
+        alert('Posting failure.');
       }
 
     })();

@@ -1,7 +1,17 @@
 import React from 'react';
+import { getLoginUser } from '../modules/LoginUser';
 
 export default function Home() {
-  return (
-    <h2>Home</h2>
-  );
+  const loginUser = getLoginUser();
+
+  if (loginUser) {
+    return (
+      <h2>Hello, {loginUser.username}</h2>
+    );
+  }
+  else {
+    return (
+      <h2>Welcome</h2>
+    );
+  }
 }

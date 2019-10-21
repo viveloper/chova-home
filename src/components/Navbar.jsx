@@ -2,7 +2,9 @@ import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const user = props.user;  
+
   return (
     <nav className="navbar">
       <div className="logo"><Link to="/">LOGO</Link></div>
@@ -32,8 +34,21 @@ export default function Navbar() {
       </div>
       <Link to="/calendar">Calendar</Link>
       <div className="login-area">
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Signup</Link>
+        {
+          user ?
+            (
+              <>
+                <Link to="/">{user.username}</Link>
+                <Link to="/" onClick={props.handleLogout}>Logout</Link>
+              </>
+            ) :
+            (
+              <>
+                <Link to="/login">Login</Link>
+                <Link to="/signup">Signup</Link>
+              </>
+            )
+        }
       </div>
     </nav>
   );

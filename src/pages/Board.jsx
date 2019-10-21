@@ -55,7 +55,7 @@ export default function Board(props) {
             </tbody>
           </table>
         </div>
-        <div>
+        <div>          
           <Link to={`/board/${category}/write`}>Write</Link>
         </div>
       </>
@@ -65,6 +65,9 @@ export default function Board(props) {
     return (
       <>
         <h2>{category}</h2>
+        <div>          
+          <Link to={`/board/${category}/write`}>Write</Link>
+        </div>
       </>
     );
   }

@@ -1,0 +1,22 @@
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.login-form {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.login-form button {  
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin-right: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
